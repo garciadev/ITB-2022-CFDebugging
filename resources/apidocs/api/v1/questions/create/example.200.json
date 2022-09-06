@@ -1,0 +1,15 @@
+{
+	"data": {
+		"questionID": 1423,
+		"question": "Best IDE",
+		"answer1": "Homesite",
+		"answer2": "IntelliJ",
+		"answer3": "CFBuilder",
+		"answer4": "Dreamweaver",
+		"correctAnswer": 1
+	},
+	"error": false,
+	"pagination": {},
+	"messages": ["Question Created"],
+	"errorcode": 0
+}

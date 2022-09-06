@@ -1,0 +1,46 @@
+{
+	"description": "Needed fields to create a Question",
+	"required": true,
+	"content": {
+		"application/json": {
+			"schema": {
+				"type": "object",
+				"required": ["question"],
+				"properties": {
+					"question": {
+						"description": "Question to be added",
+						"type": "string"
+					},
+					"answer1": {
+						"description": "1st Answer option for Question",
+						"type": "string"
+					},
+					"answer2": {
+						"description": "2nd Answer option for Question",
+						"type": "string"
+					},
+					"answer3": {
+						"description": "3rd Answer option for Question",
+						"type": "string"
+					},
+					"answer4": {
+						"description": "4th Answer option for Question",
+						"type": "string"
+					},
+					"correctAnswer": {
+						"description": "Number reference of the Correct Answer",
+						"type": "numeric"
+					}
+				},
+				"example": {
+					"question": "Best IDE",
+					"answer1": "Homesite",
+					"answer2": "IntelliJ",
+					"answer3": "CFBuilder",
+					"answer4": "Dreamweaver",
+					"correctAnswer": 1
+				}
+			}
+		}
+	}
+}

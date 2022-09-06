@@ -1,0 +1,11 @@
+{
+    "name":"itb2022-cfdebugging",
+    "web":{
+        "http":{
+            "port":"6661"
+        },
+        "rewrites":{
+            "enable":true
+        }
+    }
+}

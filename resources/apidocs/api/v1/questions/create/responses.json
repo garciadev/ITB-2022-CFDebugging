@@ -1,0 +1,67 @@
+{
+	"200": {
+		"description": "200 Success",
+		"content": {
+			"application/json": {
+				"schema": {
+					"type": "object",
+					"properties": {
+						"error": {
+							"description": "Flag to indicate an error.",
+							"type": "boolean"
+						},
+						"messages": {
+							"description": "An array of messages related to the request.",
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"pagination": {
+							"description": "Pagination information.",
+							"type": "object",
+							"properties": {}
+						},
+						"data": {
+							"description": "The data packet of the request - The created question",
+							"type": "object",
+							"properties": {
+								"questionID": {
+									"description": "The Primary Key for the Question",
+									"type": "string"
+								},
+								"question": {
+									"description": "The Question",
+									"type": "string"
+								},
+								"answer1": {
+									"description": "1st Answer option for Question",
+									"type": "string"
+								},
+								"answer2": {
+									"description": "2nd Answer option for Question",
+									"type": "string"
+								},
+								"answer3": {
+									"description": "3rd Answer option for Question",
+									"type": "string"
+								},
+								"answer4": {
+									"description": "4th Answer option for Question",
+									"type": "string"
+								},
+								"correctAnswer": {
+									"description": "Number reference of the Correct Answer",
+									"type": "numeric"
+								}
+							}
+						}
+					}
+				},
+				"example": {
+					"$ref": "example.200.json"
+				}
+			}
+		}
+	}
+}

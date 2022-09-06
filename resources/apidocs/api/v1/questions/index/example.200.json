@@ -1,0 +1,22 @@
+{
+	"data": [
+		{
+			"answer1": "coldbox",
+			"answer2": "fw/1",
+			"answer3": "cfwheels",
+			"answer4": "what's a framework?",
+			"correctAnswer": 1,
+			"question": "Best framework",
+			"questionID": 1
+		}
+	],
+	"error": false,
+	"pagination": {
+		"totalPages": 1,
+		"maxRows": 25,
+		"offset": 0,
+		"page": 1,
+		"totalRecords": 1
+	},
+	"messages": []
+}
