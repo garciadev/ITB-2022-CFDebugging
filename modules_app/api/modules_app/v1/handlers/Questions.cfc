@@ -2,6 +2,7 @@ component extends=coldbox.system.RestHandler {
 
     //DI
     property name="questionService" inject="quickService:Question";
+    property name="log" inject="logbox:logger:{this}";
 
     /**
      * Display a paginated list of Questions
@@ -42,6 +43,12 @@ component extends=coldbox.system.RestHandler {
             .retrieveQuery()
             .paginate( prc.cleanedRC.page, prc.cleanedRC.maxrows );
 
+// writeDump( prc.questions );abort;
+// log.error( "Something happened that we want to log", rc );
+// log.debug( "Debugging code...", rc );
+// log.info( "Some nice info...", rc );
+// log.warn( "Danger Will Robinson!", rc );
+
         prc.response
             .setDataWithPagination(
                 prc.questions
@@ -49,13 +56,13 @@ component extends=coldbox.system.RestHandler {
     }
 
     /**
-     * 
+     *
      * Creating a new Question
-     * 
+     *
      * @x-route (POST) /api/v1/questions
      * @tags Questions
      * @requestBody /resources/apidocs/api/v1/questions/create/requestBody.json
-     * @response-200 /resources/apidocs/api/v1/questions/create/responses.json##200 
+     * @response-200 /resources/apidocs/api/v1/questions/create/responses.json##200
      * @response-401 /resources/apidocs/api/v1/_responses/responses.401.json##401
      * @response-403 /resources/apidocs/api/v1/_responses/responses.403.json##403
      */
@@ -68,7 +75,7 @@ component extends=coldbox.system.RestHandler {
             .addMessage( "Question Created" )
             .setData( prc.oQuestion.getMemento() );
     }
-    
+
     function show( event, rc, prc ) {
         prc.oQuestion = questionService.findOrFail( rc.questionID );
         prc.response.setData( prc.oQuestion.getMemento() );
