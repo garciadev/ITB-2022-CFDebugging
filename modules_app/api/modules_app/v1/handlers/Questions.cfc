@@ -21,6 +21,8 @@ component extends=coldbox.system.RestHandler {
         param rc.descending = false;
         param rc.question = "";
 
+        // writeDump( var=rc, output="c:\dumps\#GetMetaData().name#.#GetFunctionCalledName()#_#CallStackGet()[1].LineNumber#.html", format="html" );
+
         rc.sortDirection = rc.descending == false ? "asc" : "desc";
 		if( rc.sortBy == 'null' || rc.sortBy == 'undefined'){
 			rc.sortBy = "question";
@@ -43,8 +45,10 @@ component extends=coldbox.system.RestHandler {
             .retrieveQuery()
             .paginate( prc.cleanedRC.page, prc.cleanedRC.maxrows );
 
-// writeDump( prc.questions );abort;
-// log.error( "Something happened that we want to log", rc );
+// writeDump( prc.questions );
+// writeDump( var=prc.questions, output="c:\dumps\#GetMetaData().name#.#GetFunctionCalledName()#_#CallStackGet()[1].LineNumber#.html", format="html" );
+// abort;
+// log.error( "#GetMetaData().name#.#GetFunctionCalledName()# - #CallStackGet()[1].LineNumber# - Something happened that we want to log", rc );
 // log.debug( "Debugging code...", rc );
 // log.info( "Some nice info...", rc );
 // log.warn( "Danger Will Robinson!", rc );
